@@ -1,20 +1,20 @@
 import React from 'react'
 import Link from 'next/link'
-import { Spinner } from 'react-bootstrap'
-const index = ({btnText, iconActive, clickHandler, href, className, isLoading }) => {
+import { Spinner ,Button} from 'react-bootstrap'
+import './style.module.scss'
+const index = ({btnText, iconActive, clickHandler, className, isLoading }) => {
+ 
   return (
-    <Link
+    <Button
     onClick={(e) => {
-      if (!href) {
-        e.preventDefault();
-      }
+    
 
       if (clickHandler) {
         clickHandler();
       }
     }}
     className={`button-style ${className}`}
-    to={href ? href : '#'}
+    
 
   >
     {isLoading &&
@@ -35,7 +35,7 @@ const index = ({btnText, iconActive, clickHandler, href, className, isLoading })
         className="btn-icon img-white"
       />
     ) : null}
-  </Link>
+  </Button>
   )
 }
 

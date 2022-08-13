@@ -1,8 +1,8 @@
 import React,{Fragment,useState,useEffect} from 'react'
-import './style.scss'
+import './style.module.scss'
 import { Form } from 'react-bootstrap';
 import { PropTypes } from 'prop-types';
-const Index = ({type,placeholder,name,handleChange,isInvalid,className,errors,label}) => {
+const Index = ({type,placeholder,value,name,handleChange,isInvalid,className,errors,label}) => {
   return (
      
     <Fragment>
@@ -26,9 +26,10 @@ Index.propTypes = {
   type: PropTypes.string,
   placeholder: PropTypes.string,
   name:PropTypes.string,
-  isInvalid:PropTypes.boolean,
+ 
   className:PropTypes.string,
   errors:PropTypes.string,
-  label:PropTypes.string
+  label:PropTypes.string,
+  value:PropTypes.string
 };
 export default Index
